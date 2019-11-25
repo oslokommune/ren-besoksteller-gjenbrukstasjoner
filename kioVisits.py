@@ -39,6 +39,7 @@ siste_event = 0
 def main():
     while True:
         try:
+            print("-----------------------")
             # Innlogging
             date = datetime.now().strftime('%a-%d-%m-%Y')
 
@@ -218,6 +219,8 @@ def main():
             os.execv(sys.executable, ['python3'] + sys.argv)
 
             continue
+
+        print("-----------------------")
 
 
 if __name__ == "__main__":
