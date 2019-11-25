@@ -237,81 +237,11 @@ while True:
         
    # Fanger opp error og prøver på nytt
     except Exception as e:
-        print("Error:")
-        print (e)
-        print ("Sender mail til Jørgen")
+        print(e)
         olddate = 0
         error = 1
-        errormsg = str(e)
-        #Send Email til ansvarlig:
-        import subprocess
-        
-        import smtplib
-        
-        import socket
-        
-        import os
-        
-        from email.mime.text import MIMEText
-        
-        import datetime
-        
-        
-        # Change to your own account information
-        
-        to = to
-        
-        gmail_user = gmail_user
-        
-        gmail_password = gmail_password
-        
-        smtpserver = smtplib.SMTP("smtp.gmail.com", 587)
-        
-        smtpserver.ehlo()
-        
-        smtpserver.starttls()
-        
-        smtpserver.ehlo
-        
-        smtpserver.login(gmail_user, gmail_password)
-        
-        #today = datetime.date.today()
-        
-        # Very Linux Specific
-        
-        arg="ip route list"
-        
-        p=subprocess.Popen(arg,shell=True,stdout=subprocess.PIPE)
-        
-        data = p.communicate()
-        
-        split_data = data[0].split()
-        
-        #ipaddr = split_data[split_data.index(src)+1]
-        
-        # Get the current CPU speed
-        
-        f = os.popen("/opt/vc/bin/vcgencmd get_config arm_freq")
-        
-        cpu = f.read()
-        
-        mail_body = "Raspberry Pi Haraldrud Hage har fått en error. Lukk terminal og restart: python3 HAHage2.py for å igangsette teller på nytt. Føgende error:" + errormsg
-        
-        msg = MIMEText(mail_body)
-        
-        msg["Subject"] =  "Haraldrud hage ERROR: " + errormsg
-        
-        msg["From"] = gmail_user
-        
-        msg["To"] = to
-        
-        smtpserver.sendmail(gmail_user, [to], msg.as_string())
-        
-        smtpserver.quit()
-
-        
-        print("Restarter...")
-        
+        print("Starter på nytt om 30 sek")
+        time.sleep(30)
         os.execv(sys.executable, ['python3'] + sys.argv)
         
         continue
