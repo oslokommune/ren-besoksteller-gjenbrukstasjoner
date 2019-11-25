@@ -133,6 +133,14 @@ while True:
             time.sleep(0.01)   
         # Skriv data til gspred ved ny data innenfor åpningstid
         if (ser_bytes.in_waiting > 0) and (stasjon == 1): #if incoming bytes are waiting to be read from the serial input buffer
+
+            #ORIGO Dataplattform
+
+            data = {"tidspunkt": tid, "sensorId": sensorId, "stasjonId": stasjonId, "plasseringId": plasseringId}
+            origo_response = post_event.post_event(event_payload=data, dataset_id="besoksdata-gjenbruksstasjoner", version_id="1")
+            pprint.pprint(origo_response)
+
+
             data_str = ser_bytes.read(ser_bytes.in_waiting).decode('utf-8') #read the bytes and convert from binary array to ASCII
             #print(data_str, end='')
             time.sleep(0.01)
@@ -172,12 +180,6 @@ while True:
             #wks = sps.worksheet("Total")
             #values = [date, klokkeslett, stasjonId]
             #upt = wks.append_row (values)
-            
-            #ORIGO Dataplattform
-
-            data = {"tidspunkt": tid, "sensorId": sensorId, "stasjonId": stasjonId, "plasseringId": plasseringId}
-            origo_response = post_event.post_event(event_payload=data, dataset_id="besoksdata-gjenbruksstasjoner", version_id="1")
-            pprint.pprint(origo_response)
             
         # Rebooter Pi om det ikke har skjedd noe den siste halvtimen
         if stasjon == 1 and siste_event > 50000000:
