@@ -174,13 +174,9 @@ while True:
             #upt = wks.append_row (values)
             
             #ORIGO Dataplattform
-            
-            url = "https://l2hhccv0ij.execute-api.eu-west-1.amazonaws.com/dev/event/besoksdata-gjenbruksstasjoner/1"
-            data = {"tidspunkt" : tid, "sensorId" : sensorId, "stasjonId" : stasjonId, "plasseringId" : plasseringId}
-            data_json = json.dumps(data)
-            headers = {"x-api-key": x_api_key}
-            response = requests.post(url, data=data_json, headers=headers)
-            print (data_json)
+
+            data = {"tidspunkt": tid, "sensorId": sensorId, "stasjonId": stasjonId, "plasseringId": plasseringId}
+            response = post_event.post_event(event_payload=data, dataset_id="besoksdata-gjenbruksstasjoner", version_id="1")
             pprint.pprint(response.json())
             
         # Rebooter Pi om det ikke har skjedd noe den siste halvtimen
