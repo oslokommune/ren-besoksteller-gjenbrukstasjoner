@@ -67,6 +67,7 @@ def main():
                 stasjon = 0
 
             # Nytt ark med dagens dato
+            global OLDDATE
             if date != OLDDATE:
                 OLDDATE = date
                 scope = ['https://spreadsheets.google.com/feeds',
