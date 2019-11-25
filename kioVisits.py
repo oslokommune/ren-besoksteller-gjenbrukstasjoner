@@ -39,7 +39,6 @@ siste_event = 0
 def main():
     while True:
         try:
-            print("-----------------------")
             # Innlogging
             date = datetime.now().strftime('%a-%d-%m-%Y')
 
@@ -131,6 +130,7 @@ def main():
             # Skriv data til gspred ved ny data innenfor åpningstid
             # if incoming bytes are waiting to be read from the serial input buffer
             if ser_bytes.in_waiting > 0 and stasjon == 1:
+                print("-----------------------")
                 # read the bytes and convert from binary array to ASCII
                 data_str = ser_bytes.read(ser_bytes.in_waiting).decode('utf-8')
                 # print(data_str, end='')
