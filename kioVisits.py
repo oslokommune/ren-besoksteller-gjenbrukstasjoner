@@ -18,7 +18,7 @@ from datetime import timedelta, datetime
 from origo.event.post_event import PostEvent
 from origo.config import Config
 
-post_event = PostEvent(Config)
+post_event = PostEvent(Config())
 
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
