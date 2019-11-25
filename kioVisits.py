@@ -17,8 +17,10 @@ post_event = PostEvent(Config())
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 
+credentials_path = "/home/pi/ren-besoksteller-gjenbrukstasjoner/credentials.json"
+
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-    'credentials.json', scope)
+    credentials_path, scope)
 
 gc = gspread.authorize(credentials)
 teller = 0
@@ -73,7 +75,7 @@ def main():
                 scope = ['https://spreadsheets.google.com/feeds',
                          'https://www.googleapis.com/auth/drive']
                 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-                    'credentials.json', scope)
+                    credentials_path, scope)
 
                 gc = gspread.authorize(credentials)
                 sps = gc.open("REN Gjenbruksstasjoner")
@@ -140,7 +142,7 @@ def main():
                 scope = ['https://spreadsheets.google.com/feeds',
                          'https://www.googleapis.com/auth/drive']
                 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-                    'credentials.json', scope)
+                    credentials_path, scope)
 
                 gc = gspread.authorize(credentials)
                 print("OK")
@@ -192,7 +194,7 @@ def main():
                 scope = ['https://spreadsheets.google.com/feeds',
                          'https://www.googleapis.com/auth/drive']
                 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-                    'credentials.json', scope)
+                    credentials_path, scope)
 
                 gc = gspread.authorize(credentials)
                 sps = gc.open("REN Gjenbruksstasjoner")
