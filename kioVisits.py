@@ -26,7 +26,6 @@ timer = 0
 OLD_MINUTTER = 1
 OLDDATE = 0
 error = 0
-stasjon = 1
 day = 0
 ser_bytes = serial.Serial('/dev/ttyUSB0', 9600)
 besokende = 0
@@ -50,6 +49,7 @@ def main():
             timer = int(datetime.now().strftime("%H"))
             minutter = datetime.now().minute
 
+            stasjon = 1
             # Åpningstider
             if day == "Mon" or day == "Tue" or day == "Wed" or day == "Thu":
                 if timer == 7 and minutter == 30:
@@ -57,13 +57,13 @@ def main():
                 if (timer > 20 or timer < 7):
                     stasjon = 0
 
-            if day == "Fri" or day == "Sat":
+            elif day == "Fri" or day == "Sat":
                 if (timer < 9 or timer > 16):
                     stasjon = 0
                 else:
                     stasjon = 1
 
-            if day == "Sun":
+            elif day == "Sun":
                 stasjon = 0
 
             # Nytt ark med dagens dato
