@@ -53,8 +53,8 @@ From home dir run command `$ nano .bashrc`
 In the bottom of the .bashrc file paste:
 ```
 # Origo SDK environment
-export ORIGO_API_CLIENT=my-user
-export ORIGO_API_PASSWORD=my-password
+export ORIGO_CLIENT_ID=my-client-id
+export ORIGO_CLIENT_SECRET=my-client-secret
 export ORIGO_ENVIRONMENT=prod
 export ORIGO_API_KEY=your-api-key
 
