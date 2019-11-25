@@ -237,7 +237,7 @@ while True:
         
    # Fanger opp error og prøver på nytt
     except Exception as e:
-        print(str(e))
+        print(e.with_traceback())
         olddate = 0
         error = 1
         print("Starter på nytt om 30 sek")
