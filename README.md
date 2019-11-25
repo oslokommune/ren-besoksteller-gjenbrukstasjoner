@@ -15,17 +15,17 @@ If python 3.7 i already installed, skip this step
 
 Create virtual environment:
 
-Run command: `kioVisists$ python3.7 -m venv venv` in terminal in project root directory.
+Run command: `$ python3.7 -m venv venv` in terminal in project root directory.
 
 Activate virtual environment:
 
-Run command `kioVisists$ source venv/bin/activate` in terminal in project root directory.
+Run command `$ source venv/bin/activate` in terminal in project root directory.
 
-The terminal window should now display the name of the activated virtual env on the left hand side: `(venv) kioVisists$ `
+The terminal window should now display the name of the activated virtual env on the left hand side: `(venv) $ `
 
 To make sure the virtual env is created with python3.7:
 ```
-(venv) kioVisists$ python --version
+(venv) $ python --version
 Python 3.7.1
 ```
 
@@ -35,7 +35,7 @@ In terminal run:
 
 ```
 (venv) pip install --upgrade pip
-(venv) kioVisists$ pip install -r requirements.txt
+(venv) $ pip install -r requirements.txt
 ```
 
 ### 4. Set environment variables
@@ -46,7 +46,7 @@ To run the script the following environment variables needs to be set.
 ORIGO_API_CLIENT, ORIGO_API_PASSWORD, ORIGO_ENVIRONMENT, ORIGO_API_KEY
 `
 
-To set the environment variables go to home directory in terminal: `kioVisists$ cd`
+To set the environment variables go to home directory in terminal: `$ cd`
 
 From home dir run command `$ nano .bashrc`
 
@@ -63,13 +63,20 @@ export ORIGO_API_KEY=your-api-key
 ```
 To save changes and exit the nano editor type: ctrl O -> enter -> ctrl X
 
-Then to activate the changes run command:
+# Then to activate the changes run command:
 
 `$ source .bashrc`
 
 Or you can restart the terminal.
 
-Note: after running `$ source .bashrc` the python virtual environment will be deactivated and you will need to reactivate it: `kioVisists$ source venv/bin/activate`
+Note: after running `$ source .bashrc` the python virtual environment will be deactivated and you will need to reactivate it: `$ source venv/bin/activate`
 
 You are now set up to run the script :)
 
+### 5. Not working?
+If for some reason virtual environment is not working and turning out to be troublesome. Then use this commands instead:
+```
+$ sudo pip3.7 install --upgrade pip
+$ sudo pip3.7 install -r requirements.txt
+$ python3.7 kioVisits.py
+```
