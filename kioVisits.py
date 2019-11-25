@@ -77,7 +77,7 @@ while True:
         # Nytt ark med dagens dato
         if not (date == olddate):
             scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-            credentials = ServiceAccountCredentials.from_json_keyfile_name('hahage.json', scope)
+            credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
         
             gc = gspread.authorize(credentials)
             sps = gc.open("REN Gjenbruksstasjoner")            
@@ -139,7 +139,7 @@ while True:
             print("Authorizing credentials: ")
             
             scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-            credentials = ServiceAccountCredentials.from_json_keyfile_name('hahage.json', scope)
+            credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
         
             gc = gspread.authorize(credentials)
             print ("OK")
@@ -188,7 +188,7 @@ while True:
         if timer == 21 and minutter == 30:
             print("Oppdaterer Haraldrud Gjenbruksstasjon - Oversikt")
             scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-            credentials = ServiceAccountCredentials.from_json_keyfile_name('hahage.json', scope)
+            credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
         
             gc = gspread.authorize(credentials)
             sps = gc.open("REN Gjenbruksstasjoner")   
