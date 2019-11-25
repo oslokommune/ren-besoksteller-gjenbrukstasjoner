@@ -176,8 +176,8 @@ while True:
             #ORIGO Dataplattform
 
             data = {"tidspunkt": tid, "sensorId": sensorId, "stasjonId": stasjonId, "plasseringId": plasseringId}
-            response = post_event.post_event(event_payload=data, dataset_id="besoksdata-gjenbruksstasjoner", version_id="1")
-            pprint.pprint(response.json())
+            origo_response = post_event.post_event(event_payload=data, dataset_id="besoksdata-gjenbruksstasjoner", version_id="1")
+            pprint.pprint(origo_response)
             
         # Rebooter Pi om det ikke har skjedd noe den siste halvtimen
         if stasjon == 1 and siste_event > 50000000:
@@ -237,7 +237,7 @@ while True:
         
    # Fanger opp error og prøver på nytt
     except Exception as e:
-        print(e.with_traceback())
+        print(e)
         olddate = 0
         error = 1
         print("Starter på nytt om 30 sek")
