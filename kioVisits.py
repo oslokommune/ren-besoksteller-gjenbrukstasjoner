@@ -68,6 +68,7 @@ def main():
 
             # Nytt ark med dagens dato
             if date != OLDDATE:
+                OLDDATE = date
                 scope = ['https://spreadsheets.google.com/feeds',
                          'https://www.googleapis.com/auth/drive']
                 credentials = ServiceAccountCredentials.from_json_keyfile_name(
@@ -114,6 +115,7 @@ def main():
 
             if not minutter == OLD_MINUTTER:
                 print(klokkeslett)
+                OLD_MINUTTER = minutter
 
             # Se etter ny data fra Arduino utenfor åpningstid
             # if incoming bytes are waiting to be read from the serial input buffer
