@@ -63,7 +63,7 @@ export ORIGO_API_KEY=your-api-key
 ```
 To save changes and exit the nano editor type: ctrl O -> enter -> ctrl X
 
-# Then to activate the changes run command:
+Then to activate the changes run command:
 
 `$ source .bashrc`
 
