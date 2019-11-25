@@ -67,7 +67,7 @@ def main():
                 stasjon = 0
 
             # Nytt ark med dagens dato
-            if not date == OLDDATE:
+            if date != OLDDATE:
                 scope = ['https://spreadsheets.google.com/feeds',
                          'https://www.googleapis.com/auth/drive']
                 credentials = ServiceAccountCredentials.from_json_keyfile_name(
@@ -78,7 +78,6 @@ def main():
                 titles_list = []
                 for worksheet in sps:
                     titles_list.append(worksheet.title)
-                    print("Henter liste")
                 if date not in titles_list:
                     if not day == "Sun":
                         print("Lager nytt ark")
@@ -219,4 +218,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print("Starting kioVisits visitor counter...")
     main()
