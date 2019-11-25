@@ -113,7 +113,7 @@ def main():
 
             # Iterasjoner siden siste event
             # siste_event = siste_event + 1
-
+            global OLD_MINUTTER
             if not minutter == OLD_MINUTTER:
                 print(klokkeslett)
                 OLD_MINUTTER = minutter
