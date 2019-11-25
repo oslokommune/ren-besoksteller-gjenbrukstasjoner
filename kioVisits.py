@@ -15,10 +15,15 @@ import keyboard #Using module keyboard
 import serial
 from time import gmtime, strftime
 from datetime import timedelta, datetime
+from origo.event.post_event import PostEvent
+from origo.config import Config
+
+post_event = PostEvent(Config)
+
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 
-credentials = ServiceAccountCredentials.from_json_keyfile_name('hahage.json', scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', scope)
 
 gc = gspread.authorize(credentials)
 teller = 0

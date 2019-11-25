@@ -125,4 +125,4 @@ venv.bak/
 dmypy.json
 
 # Secret
-hahage.json
+credentials.json
