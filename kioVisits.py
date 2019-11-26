@@ -8,7 +8,6 @@ import serial
 from datetime import datetime
 from origo.event.post_event import PostEvent
 from origo.config import Config
-import requests
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
