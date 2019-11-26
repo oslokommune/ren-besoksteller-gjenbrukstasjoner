@@ -9,7 +9,7 @@
 
 ### 1. Install python 3.7
 
-If python 3.7 i already installed, skip this step
+If python 3.7 is already installed, skip this step
 
 ### 2. Create and activate virtual env
 
@@ -73,7 +73,17 @@ Note: after running `$ source .bashrc` the python virtual environment will be de
 
 You are now set up to run the script :)
 
-### 5. Not working?
+### 5. Set up autostart for raspberry pi
+
+First make sure that the repository resides in the raspberry pi's home directory, e.g. path to repository is `home/pi/ren-besoksteller-gjenbrukstasjoner`.
+
+Then run `sudo nano -----` and update the file with the following content:
+```
+@lxterminal -e /home/pi/ren-besoksteller-gjenbrukstasjoner/start_trigger.sh
+```
+ 
+
+### 6. Not working?
 If for some reason virtual environment is not working and turning out to be troublesome. Then use this commands instead:
 ```
 $ sudo pip3.7 install --upgrade pip
