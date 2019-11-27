@@ -1,5 +1,4 @@
 #!/bin/bash
-source $HOME/.bashrc
-cd $HOME/ren-besoksteller-gjenbrukstasjoner
+cd /home/pi/ren-besoksteller-gjenbrukstasjoner
 source venv/bin/activate
 python startup.py
