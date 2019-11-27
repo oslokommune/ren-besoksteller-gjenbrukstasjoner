@@ -47,7 +47,7 @@ In terminal run:
 To run the script the following environment variables needs to be set.
 
 `
-ORIGO_API_CLIENT, ORIGO_API_PASSWORD, ORIGO_ENVIRONMENT, ORIGO_API_KEY
+ORIGO_CLIENT_ID, ORIGO_CLIENT_SECRET, ORIGO_ENVIRONMENT, ORIGO_API_KEY
 `
 
 To set the environment variables go to home directory in terminal: `$cd`
