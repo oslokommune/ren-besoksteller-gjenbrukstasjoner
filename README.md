@@ -87,13 +87,4 @@ Then run `nano .config/lxsession/LXDE-pi/autostart` and update the file with the
 @lxterminal -e bash /home/pi/ren-besoksteller-gjenbrukstasjoner/start_trigger.sh
 ```
 
-The `start_trigger.sh` script will ensure that the python program runs with the virtual environment created in step 2.  
- 
-
-### 6. Not working?
-If for some reason virtual environment is not working and turning out to be troublesome. Then use this commands instead:
-```
-$sudo pip3.7 install --upgrade pip
-$sudo pip3.7 install -r requirements.txt
-$python3.7 kioVisits.py
-```
+The `start_trigger.sh` script will ensure that the python program runs with the virtual environment created in step 2.
