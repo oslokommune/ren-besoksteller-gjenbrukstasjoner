@@ -73,7 +73,7 @@ Then to activate the changes run command:
 
 Or you can restart the terminal.
 
-Note: after running `$source .bashrc` the python virtual environment will be deactivated and you will need to reactivate it: `$ source venv/bin/activate`
+Note: after running `$source .bashrc` the python virtual environment will be deactivated and you will need to reactivate it: `$source venv/bin/activate`
 
 You are now set up to run the script :)
 
