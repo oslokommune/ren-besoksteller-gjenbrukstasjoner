@@ -13,6 +13,8 @@ If python 3.7 is already installed, skip this step. If not run install_python37.
 
 `$ sh install_python37.sh`
 
+The steps in the install-script is taken from this guide: [How to install Python 3.7 on Raspberry PI (Raspbian)](https://installvirtual.com/install-python-3-7-on-raspberry-pi/)
+
 ### 2. Create and activate virtual env
 
 Create virtual environment:
@@ -55,10 +57,10 @@ From home dir run command `$ nano .bashrc`
 In the bottom of the .bashrc file paste:
 ```
 # Origo SDK environment
-export ORIGO_CLIENT_ID=my-client-id
-export ORIGO_CLIENT_SECRET=my-client-secret
+export ORIGO_CLIENT_ID=<my-client-id>
+export ORIGO_CLIENT_SECRET=<my-client-secret>
 export ORIGO_ENVIRONMENT=prod
-export ORIGO_API_KEY=your-api-key
+export ORIGO_API_KEY=<your-api-key>
 
 ^G Get Help        ^O WriteOut        ^R Read File       ^Y Prev Page       ^K Cut Text        ^C Cur Pos
 ^X Exit            ^J Justify         ^W Where Is        ^V Next Page       ^U UnCut Text      ^T To Spell
