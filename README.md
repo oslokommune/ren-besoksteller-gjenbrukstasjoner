@@ -55,7 +55,7 @@ To set the environment variables go to home directory in terminal: `$cd`
 
 From home dir run command `$nano .profile`.
 
-In the bottom of the .bashrc file paste:
+In the bottom of the .profile file paste:
 ```
 # Origo SDK environment
 export ORIGO_CLIENT_ID=<my-client-id>
