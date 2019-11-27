@@ -52,7 +52,7 @@ ORIGO_CLIENT_ID, ORIGO_CLIENT_SECRET, ORIGO_ENVIRONMENT, ORIGO_API_KEY
 
 To set the environment variables go to home directory in terminal: `$cd`
 
-From home dir run command `$nano .bashrc`
+From home dir run command `$nano .profile`.
 
 In the bottom of the .bashrc file paste:
 ```
@@ -69,11 +69,11 @@ To save changes and exit the nano editor type: ctrl O -> enter -> ctrl X
 
 Then to activate the changes run command:
 
-`$source .bashrc`
+`$source .profile`
 
 Or you can restart the terminal.
 
-Note: after running `$source .bashrc` the python virtual environment will be deactivated and you will need to reactivate it: `$source venv/bin/activate`
+Note: after running `$source .profile` the python virtual environment will be deactivated and you will need to reactivate it: `$source venv/bin/activate`
 
 You are now set up to run the script :)
 
@@ -81,9 +81,9 @@ You are now set up to run the script :)
 
 First make sure that the repository resides in the raspberry pi's home directory, e.g. path to repository is `home/pi/ren-besoksteller-gjenbrukstasjoner`.
 
-Then run `sudo nano -----` and update the file with the following content:
+Then run `nano .config/lxsession/LXDE-pi/autostart` and update the file with the following content:
 ```
-@lxterminal -e /home/pi/ren-besoksteller-gjenbrukstasjoner/start_trigger.sh
+@lxterminal -e bash /home/pi/ren-besoksteller-gjenbrukstasjoner/start_trigger.sh
 ```
  
 
