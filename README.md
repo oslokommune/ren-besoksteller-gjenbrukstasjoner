@@ -1,10 +1,11 @@
 
 # How to set up and run kioVisits script
 
-1. Install python 3.7
-2. Create and activate virtual environment
-3. Install requirements
-4. Set environment variables
+1. [Install python 3.7](#1-install-python-37)
+2. [Create and activate virtual environment](#2-create-and-activate-virtual-env)
+3. [Install requirements](#3-install-requirements)
+4. [Set environment variables](#4-set-environment-variables)
+5. [Set up autostart for raspberry pi](#5-set-up-autostart-for-raspberry-pi)
 
 
 ### 1. Install python 3.7
