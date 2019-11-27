@@ -9,7 +9,9 @@
 
 ### 1. Install python 3.7
 
-If python 3.7 is already installed, skip this step
+If python 3.7 is already installed, skip this step. If not run install_python37.sh:
+
+`$ sh install_python37.sh`
 
 ### 2. Create and activate virtual env
 
